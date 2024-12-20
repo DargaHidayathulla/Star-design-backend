@@ -241,3 +241,6 @@ async def course_type_batch_data(course_type: str,db: Session = Depends(get_db))
     except Exception as e:
         return {"success": False, "message": "Getting error data", "error": str(e)}
 
+@router.get("/render")
+def read_home():
+    return {"message": "Home route works!"}
